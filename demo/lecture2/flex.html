@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Demo</title>
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: space-around; /* Distributes space around items */
+            align-items: center; /* Vertically aligns items in the center */
+            height: 300px; /* Adjust the height as needed */
+            background-color: lightgrey;
+            padding: 10px;
+
+            /* Uncomment to explore more flex properties */
+            /* flex-direction: row; */ /* Default: Items are in a row */
+            flex-direction: column;
+            /* flex-wrap: nowrap; */ /* Default: All items on one line */
+            flex-wrap: wrap; 
+            /* align-content: stretch; Lines stretch to take up the remaining space */
+            /* align-content: flex-start; Lines packed to the start of the container */
+            /* align-content: flex-end; */ /* Lines packed to the end of the container */
+            /* align-content: center; */ /* Lines packed to the center of the container */
+            /* align-content: space-between; Lines evenly distributed; first line at start and last line at end of container */
+            align-content: space-around; /* Lines evenly distributed with equal space around each line */
+        }
+
+        .flex-item {
+            width: 100px; /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+            text-align: center;
+            line-height: 100px; /* This should be the same as the height to vertically center the text */
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px; /* Optional: for rounded corners */
+
+            /* Uncomment to explore individual flex item properties */
+            /* flex-grow: 0; */ /* Default: Item will not grow to fill the container */
+            flex-grow: 1; /* Item will grow to fill the container */
+            /* flex-shrink: 1; */ /* Default: Item will shrink if necessary */
+            /* flex-shrink: 0; */ /* Item will not shrink */
+            /* flex-basis: auto; */ /* Default: Item will be sized according to its width and height */
+            /* flex: 1; */ /* Shorthand for flex-grow, flex-shrink and flex-basis */
+            /* align-self: auto; */ /* Default: Inherits from container's align-items property */
+            /* align-self: flex-start; */ /* Aligns this item at the start of the cross axis */
+            /* align-self: flex-end; */ /* Aligns this item at the end of the cross axis */
+            /* align-self: center; */ /* Aligns this item in the center of the cross axis */
+            /* align-self: baseline; */ /* Aligns this item on the baseline of the cross axis */
+            /* align-self: stretch; */ /* Stretches the item to fill the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item" style="background-color: red;">Box 1</div>
+        <div class="flex-item" style="background-color: blue;">Box 2</div>
+        <div class="flex-item" style="background-color: green;">Box 3</div>
+        <div class="flex-item" style="background-color: orange; flex-grow: 100;">Box 4</div>
+        <div class="flex-item" style="background-color: purple;">Box 5</div>
+    </div>
+</body>
+</html>
