@@ -23,23 +23,23 @@ header {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Change to flex */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    align-items: center;
 }
 
 .header-nav ul li {
     display: inline;
-    margin-left: 10px; /* Add margin to separate items */
+    margin-left: 10px;
 }
 
 .header-nav ul li:first-child {
-    margin-left: 0; /* Remove margin for the first item */
+    margin-left: 0;
 }
 
 .header-nav ul li a {
     color: #9370DB;
     text-decoration: none;
-    padding: 10px 20px; /* Adjust padding */
+    padding: 10px 20px;
     background-color: white;
     border-radius: 20px;
 }
