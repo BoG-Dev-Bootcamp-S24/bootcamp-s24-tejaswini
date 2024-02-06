@@ -40,64 +40,12 @@ header {
     border-radius: 15px;
 }
 
-.search-container {
-    text-align: center;
-    margin-top: 190px;
+.profile-pic-container {
+    margin-right: 20px;
 }
 
-.search-title {
-    color: #9370DB;
-    font-size: 72px;
-    margin-bottom: 10px; 
+.profile-pic {
+    border: 2px solid black;
+    border-radius: 50%;
 }
 
-
-.search-input {
-    width: 80%;
-    max-width: 500px;
-    padding: 10px 20px;
-    border: 1px solid #dcdcdc;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    outline: none;
-    font-size: 16px;
-    box-shadow: 4px 4px 8px #9370DB;
-}
-
-.buttons {
-    margin-bottom: 20px;
-}
-
-.search-button, .lucky-button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    border: none;
-    background-color: #b18ef6;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Varela Round', Arial, sans-serif;
-    color: white;
-    outline: none;
-}
-
-.search-button:hover, .lucky-button:hover {
-    background-color: #aa65ff;
-}
-
-.search-footer {
-    color: #777;
-    font-size: 14px;
-    margin-top: 30px;
-}
-
-@media (max-width: 600px) {
-    .search-input {
-        width: 90%;
-    }
-
-    .search-button, .lucky-button {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-}
