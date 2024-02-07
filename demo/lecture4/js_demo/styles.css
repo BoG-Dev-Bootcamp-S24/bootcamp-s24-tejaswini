@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: #fbf7f4;
+  margin: 0;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+.nav-bar a:hover {
+  color: red;
+  transition: color 0.3s;
+}
+
+ul.nav-bar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-bar li {
+  padding: 10px;
+  padding-right: 30px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
