@@ -155,3 +155,14 @@ header {
     font-size: 14px;
     margin-top: 30px;
 }
+
+.search-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #b18ef6;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
