@@ -31,10 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   Promise.all(fetchPromises)
-    .then((list) => {
-        list.forEach((fact) => {
-            console.log(fact);
-        })
+    .then(() => {
       catHtml.innerHTML = `<ul>${factsList}</ul>`;
     })
     .catch((error) => {

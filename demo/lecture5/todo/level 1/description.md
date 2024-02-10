@@ -1,0 +1,1 @@
+For Level 1, students will need to add JavaScript functionality to the To-Do list where new tasks, upon being entered and the 'Add' button clicked, will appear as new list items (<li> elements) within the unordered list (<ul> element) already present in the provided HTML.
