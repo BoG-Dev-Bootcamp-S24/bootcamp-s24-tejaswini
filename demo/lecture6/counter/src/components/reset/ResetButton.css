@@ -1,0 +1,10 @@
+.reset-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: lightcoral;
+    border: none;
+    border-radius: 5px;
+  }
+  
