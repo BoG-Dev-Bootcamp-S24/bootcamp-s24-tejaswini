@@ -7,17 +7,32 @@ function TodoListSolution() {
 
   const addTodo = (e) => {
     if (task) {
-      setTodos([...todos, { task, completed: false }]);
+
+      setTodos(todos + [{ task, completed: false }]);
       setTask('');
     }
   };
 
   const toggleComplete = (task) => {
-    setTodos(todos.map(todo => todo.task === task ? { ...todo, completed: !todo.completed } : todo));
+    const newTodos = [];
+    todos.forEach(todo => {
+      if (todo.task === task) {
+        newTodos.push({ ...todo, completed: !todo.completed });
+      } else {
+        newTodos.push(todo);
+      }
+    });
+    setTodos(newTodos);
   };
 
   const removeTodo = (task) => {
-    setTodos(todos.filter(todo => todo.task !== task));
+    const newTodos = []
+    todos.forEach(todo => {
+      if (todo.task !== task) {
+        newTodos.push(todo);
+      }
+    });
+    setTodos(newTodos);
   };
 
   return (

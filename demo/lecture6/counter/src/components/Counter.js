@@ -6,17 +6,23 @@ import ResetButton from './reset/ResetButton';
 
 
 function Counter() {
-    let count = 0;
+
+    const count = 0;
   
     const increment = () => {
+
     };
   
     const decrement = () => {
+
       }
   
     return (
       <div className="counter">
-        
+        {name}
+        Counter: {count}
+        <button onClick={increment}>Increment by 2</button>
+        <button onClick={decrement}>Decrement</button>
       </div>
     );
   }

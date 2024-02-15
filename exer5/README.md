@@ -4,8 +4,12 @@ In this project, you'll be creating a frontend that graphically displays Pokémo
 
 ## Setting Up
 - Make sure your repo is up to date
-- Navigate to the `exer5` directory
-- Run `create-react-app pokedex` in your terminal
+- Navigate to your forked repo
+- Navigate to `exer5`
+- Run `npx create-react-app pokedex` in your terminal
+- Navigate to the created `pokedex` directory
+- Run `npm start` to see the local server for the web app!
+
 - Helpful Advice: Creating a `components` folder in the `src` directory can help with organization and clutter!
 
 # Submission Instructions
@@ -26,6 +30,10 @@ In this project, you'll be creating a frontend that graphically displays Pokémo
 <img width="500" alt="Screenshot 2023-09-26 at 5 41 02 PM" src="https://github.com/BoG-Dev-Bootcamp-S24/bootcamp-s24/blob/main/exer5/assets/info_screen.jpeg">
 <img width="500" alt="Screenshot 2023-09-26 at 5 41 09 PM" src="https://github.com/BoG-Dev-Bootcamp-S24/bootcamp-s24/blob/main/exer5/assets/moves_screen.jpeg">
 
+**GIF of interactions** 
+<br>
+![](https://github.com/BoG-Dev-Bootcamp-S24/bootcamp-s24/blob/main/exer5/assets/Exer5_example.gif)
+
 ### General Guidelines
 You should try to follow the mockups as closely as possible (including the alignments). The Figma designs can be found [here](https://www.figma.com/file/FuH7N8hWLw1UGoybZsLtNM/Bits_Of_Good_Exercise_5?type=design&node-id=0%3A1&mode=design&t=6K9yoFlC0fMsQIbW-1).
 
@@ -43,6 +51,39 @@ You will be pinging the PokeAPI using `fetch()`. Refer to the [PokeAPI docs](htt
     - Pokemon Moves
     - Pokemon Stats
     - Pokemon Name
+- Example: This code is to showcase a way to get the information for a pokemon. This is NOT the only way! Make sure to think about what hooks would be appropriate for the dex information!
+  ```
+  const URL = "https://pokeapi.co/api/v2/pokemon/"; //Put the url for the endpoint into a variable for readability and convenience :)
+
+  /*
+  This function fetches the JSON for the specified pokemon and returns it.
+  */
+  const getPokemonJSON = async (dexNumber) => {
+      try {
+          const response = await fetch(`${URL}/{dexNumber}/`); //A string template literal; basically a more readable way to put variables in a string
+          const pokemonJSON = await response.json();
+          return pokemonJSON;
+      } catch(e) {
+          throw e;
+      }
+  }
+
+  const pokemonJSON = getPokemonJSON(1); //bulbasaur
+  
+  /*
+  The following are the keys for the returned JSON that you would probably find useful. NOTE: You might need to use the taught JS methods to get
+  the information you need. These are just starting points!
+  */
+  const pokemonTypes = pokemonJSON.types; //array of objects
+  const pokemonMoves = pokemonJSON.moves; //array of objects
+  const pokemonSprite = pokemonJSON.sprites; //object with different img urls
+  const pokemonStats = pokemonJSON.stats; //array of objects
+  const pokemonName = pokemonJSON.name; //string
+  const pokemonHeight = pokemonJSON.height; //number
+  const pokemonWeight = pokemonJSON.weight; //number
+  const pokemonDexNumber = pokemonJSON.order; //number
+  
+  ```
 
 
 
