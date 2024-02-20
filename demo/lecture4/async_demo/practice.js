@@ -9,6 +9,34 @@ document.getElementById('nameForm').addEventListener('submit', async (event) => 
     const genderizeUrl = `https://api.genderize.io?name=${name}`;
     //nationality-
     const nationalizeUrl = `https://api.nationalize.io?name=${name}`;
+
+
+    try {
+        const responses = await Promise.all([
+            fetch(agifyUrl),
+            fetch(genderizeUrl),
+            fetch(nationalizeUrl)
+        ]);
+
+        const results = await Promise.all(responses.map(response => {
+            if (!response.ok) {
+                throw new Error(`Error with the request! Status: ${response.status}`);
+            }
+            return response.json();
+        }
+
+        ));
+
+        document.getElementById('ageResult').textContent = `Predicted Age: ${results[0].age}`;
+        document.getElementById('genderResult').textContent
+        document.getElementById('nationalityResult').textContent = `Top Predicted Nationality: ${results[2].country[0]?.country_id || 'Unknown'}`;
+    } catch (error) {
+        console.error("There was a problem fetching the data:", error);
+        document.getElementById('ageResult').textContent = 'Error fetching data';
+        document.getElementById('genderResult').textContent = 'Error fetching data';
+        document.getElementById('nationalityResult').textContent = 'Error fetching data';
+  
+    }
   
     //solution-
     // try {
