@@ -25,7 +25,7 @@ document.getElementById('add-button').addEventListener('click', function() {
     }
 });
 
-/* with checkbox */
+/* added method with checkbox */
 /*document.getElementById('add-button').addEventListener('click', function() {
     let todoList = document.getElementById('todo-list');
     let todoInput = document.getElementById('todo-input');
