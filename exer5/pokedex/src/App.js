@@ -1,15 +1,63 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import PokeDex from './components/PokeDex.js';
+import "./App.css";
+import { useState, useEffect } from "react";
 
-const App = () => {
-    return (
-        <React.StrictMode>
-            <PokeDex />
-        </React.StrictMode>
-    );
-};
+const API_URL = "https://pokeapi.co/api/v2/pokemon/";
 
-ReactDOM.render(<App />, document.getElementById('app'));
+function App() {
+  const [index, setIndex] = useState(1);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  async function getData() {
+    setLoading(true); // Set loading to true when starting to fetch new data
+    try {
+      const res = await fetch(API_URL + index);
+      const newData = await res.json();
+
+      setData(newData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setData(null);
+    }
+    setLoading(false);
+  }
+
+  // fetch data at beginning and whenever index changes
+  useEffect(() => {
+    getData();
+  }, [index]);
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        {loading ? (
+          <div>Loading...</div>
+        ) : data ? (
+          <>
+            <img src={data.sprites.front_default} className="App-logo" alt="logo" />
+            <p>Pokemon Name: {data.name}</p>
+            {/* ... other content ... */}
+          </>
+        ) : (
+          <div>Error fetching data</div>
+        )}
+        <button
+          onClick={() => {
+            if (index > 1) setIndex(index - 1);
+          }}
+        >
+          Left Arrow (Prev)
+        </button>
+        <button
+          onClick={() => {
+            setIndex(index + 1);
+          }}
+        >
+          Right Arrow (Next)
+        </button>
+      </header>
+    </div>
+  );
+}
 
 export default App;

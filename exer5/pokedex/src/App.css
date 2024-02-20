@@ -1,38 +1,31 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #fff;
+  color: black;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 150px; /* Adjust as needed */
+  pointer-events: all; /* Enable pointer events if you want to make the image clickable */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* You can remove the media query and keyframes if you're not using the spinning logo animation */
+
+/* Style adjustments for buttons and other elements can go here */
+button {
+  margin: 5px;
+  padding: 10px;
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
 }
+
+/* Add any other styles you need */
