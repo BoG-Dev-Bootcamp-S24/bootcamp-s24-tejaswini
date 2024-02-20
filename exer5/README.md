@@ -53,7 +53,7 @@ You will be pinging the PokeAPI using `fetch()`. Refer to the [PokeAPI docs](htt
     - Pokemon Name
 - Example: This code is to showcase a way to get the information for a pokemon. This is NOT the only way! Make sure to think about what hooks would be appropriate for the dex information!
   ```
-  const URL = "https://pokeapi.co/api/v2/pokemon/"; //Put the url for the endpoint into a variable for readability and convenience :)
+  const URL = "https://pokeapi.co/api/v2/pokemon"; //Put the url for the endpoint into a variable for readability and convenience :)
 
   /*
   This function fetches the JSON for the specified pokemon and returns it.
