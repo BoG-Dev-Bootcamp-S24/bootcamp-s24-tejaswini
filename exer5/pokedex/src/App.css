@@ -13,19 +13,22 @@
 }
 
 .App-logo {
-  height: 150px; /* Adjust as needed */
-  pointer-events: all; /* Enable pointer events if you want to make the image clickable */
+  height: 150px; 
+  pointer-events: all; 
 }
 
-/* You can remove the media query and keyframes if you're not using the spinning logo animation */
-
-/* Style adjustments for buttons and other elements can go here */
 button {
   margin: 5px;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: lightgrey;
   border: none;
   cursor: pointer;
+  border-radius: 50px;
+  font-size: large;
+  justify-content: space-between;
+
 }
 
-/* Add any other styles you need */

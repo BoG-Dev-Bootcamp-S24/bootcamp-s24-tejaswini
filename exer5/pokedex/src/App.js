@@ -41,20 +41,22 @@ function App() {
         ) : (
           <div>Error fetching data</div>
         )}
-        <button
-          onClick={() => {
-            if (index > 1) setIndex(index - 1);
-          }}
-        >
-          Left Arrow (Prev)
-        </button>
-        <button
-          onClick={() => {
-            setIndex(index + 1);
-          }}
-        >
-          Right Arrow (Next)
-        </button>
+        <div className="button">
+          <button
+            onClick={() => {
+              if (index > 1) setIndex(index - 1);
+            }}
+          >
+            &lt;
+          </button>
+          <button
+            onClick={() => {
+              setIndex(index + 1);
+            }}
+          >
+            &gt;
+          </button>
+        </div>
       </header>
     </div>
   );
