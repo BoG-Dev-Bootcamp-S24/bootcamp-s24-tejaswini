@@ -1,12 +1,34 @@
-.sprite-container {
-  border: 2px solid rgb(70, 70, 70);
-  display: inline-block;
-  padding: 2px; 
-}
-
 .App {
   text-align: center;
   font-family: sans-serif;
+  display: flex; /* This will help us align items side-by-side */
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Align children in a row */
+}
+
+.left-column, .right-column {
+  flex: 1; /* Each column will take up equal space */
+  padding: 20px; /* Add some padding around the content */
+}
+
+.sprite-container {
+  border: 2px solid rgb(70, 70, 70);
+  display: inline-block;
+  padding: 2px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center; /* Center the navigation buttons horizontally */
+  margin-top: 20px;
+}
+
+.info-button.active, .moves-button.active {
+  background-color: #4CAF50; 
 }
 
 .App-header {

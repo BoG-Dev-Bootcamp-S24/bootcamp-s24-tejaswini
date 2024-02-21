@@ -30,62 +30,67 @@ function App() {
 
   const incrementDexNumber = () => setDexNumber((prev) => prev + 1);
   const decrementDexNumber = () => setDexNumber((prev) => (prev > 1 ? prev - 1 : 1));
-
   return (
     <div className="App">
       {error && <div>Error: {error}</div>}
       {pokemonData && (
-        <>
-          <div className="sprite-container">
-            <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
-          </div>
-          <div>
-            <h2>{pokemonData.name}</h2>
-            <div>
+        <div className="content">
+          <div className="left-column">
+            <div className="sprite-container">
+              <img src={pokemonData.sprites.front_default} alt={pokemonData.name} />
+            </div>
+            <div className="name-box">
+            {pokemonData.name}
+            </div>
+            <div className="types">
               {pokemonData.types.map((type) => (
                 <span key={type.type.name} className={`type-badge type-${type.type.name}`}>
                   {type.type.name}
                 </span>
               ))}
             </div>
-            <div>
+            <div className="navigation-buttons">
+              <button onClick={decrementDexNumber}>&lt;</button>
+              <button onClick={incrementDexNumber}>&gt;</button>
+            </div>
+          </div>
+          <div className="right-column">
+            
+            <div className="info-moves-container">
               {currentTab === 'info' && (
-                <>
+                <div className="info">
                   <p>Height: {pokemonData.height * 0.1}m</p>
                   <p>Weight: {pokemonData.weight * 0.1}kg</p>
                   {pokemonData.stats.map((stat) => (
                     <p key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</p>
                   ))}
-                </>
+                </div>
               )}
               {currentTab === 'moves' && (
-                <div>
+                <div className="moves">
                   {pokemonData.moves.map((move, index) => (
                     <p key={index}>{move.move.name}</p>
                   ))}
                 </div>
               )}
+              <div className="tab-buttons">
+                <button
+                  className={`info-button ${currentTab === 'info' ? 'active' : ''}`}
+                  onClick={() => setCurrentTab('info')}
+                >
+                  Info
+                </button>
+                <button
+                  className={`moves-button ${currentTab === 'moves' ? 'active' : ''}`}
+                  onClick={() => setCurrentTab('moves')}
+                >
+                  Moves
+                </button>
+              </div>
             </div>
+
           </div>
-          <div>
-            <button onClick={decrementDexNumber}>&lt;</button>
-            <button onClick={incrementDexNumber}>&gt;</button>
-          </div>
-          <div>
-            <button
-              className={`info-button ${currentTab === 'info' ? 'active' : ''}`}
-              onClick={() => setCurrentTab('info')}
-            >
-              Info
-            </button>
-            <button
-              className={`moves-button ${currentTab === 'moves' ? 'active' : ''}`}
-              onClick={() => setCurrentTab('moves')}
-            >
-              Moves
-            </button>
-          </div>
-        </>
+        </div>
       )}
     </div>
   );
