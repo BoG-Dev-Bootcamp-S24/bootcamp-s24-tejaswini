@@ -1,120 +1,123 @@
+.sprite-container {
+  border: 2px solid rgb(70, 70, 70);
+  display: inline-block;
+  padding: 2px; 
+}
+
 .App {
   text-align: center;
-  font-family: 'Arial', sans-serif;
-  background-color: #f3f3f3;
-  padding: 20px;
+  font-family: sans-serif;
 }
 
-.pokedex-container {
-  width: 100%;
-  max-width: 360px;
-  margin: 20px auto;
+.App-header {
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.pokedex-header {
-  background-color: #ef5350;
-  color: #ffffff;
-  padding: 10px;
-  font-size: 24px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.sprite-container {
-  border: 2px solid #444;
-  display: inline-block;
-  padding: 10px;
-  background-color: #fff;
-  margin-top: 20px;
-}
-
-.pokemon-info {
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.pokemon-name {
-  text-transform: capitalize;
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.pokemon-types {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.type-badge {
-  padding: 5px 10px;
-  border-radius: 10px;
-  margin: 5px;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-/* Type color classes */
-.type-normal { background-color: #A8A77A; }
-/* ... Add other type color classes here ... */
-
-.controls {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px;
+.App-logo {
+  height: 200px;
+  pointer-events: all;
 }
 
 button {
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  background-color: #f8f8f8;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-weight: bold;
-  font-size: 16px;
-  outline: none;
-}
-
-button:active {
-  background-color: #ddd;
-}
-
-.tab-buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-.tab-button {
-  padding: 10px 20px;
-  border: none;
+  margin: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: lightgrey;
-  border-radius: 20px;
+  border: none;
   cursor: pointer;
-  font-weight: bold;
-  outline: none;
+  border-radius: 25px;
+  box-shadow: 0cqh 0px 2px 0px rgba(0,0,0,0.75);
 }
 
-.tab-button.active {
-  background-color: #4CAF50;
+.name-box {
+  height: 50;
+  width: 150px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(129, 129, 129);
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin-bottom: 8px; 
+  display: inline-block; /* makes the container as wide as its content */
+}
+
+.name-text {
+  font-size: 16px;
+  color: black;
+  margin: 0; 
+}
+
+.type-text {
+  display: inline-block;
+  background-color: olive;
   color: white;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 10px;
+  font-size: 14px;
+  }
+  
+  .button-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .type-normal { background-color: #A8A77A; }
+.type-fire { background-color: #EE8130; }
+.type-water { background-color: #6390F0; }
+.type-electric { background-color: #F7D02C; }
+.type-grass { background-color: #7AC74C; }
+.type-ice { background-color: #96D9D6; }
+.type-fighting { background-color: #C22E28; }
+.type-poison { background-color: #A33EA1; }
+.type-ground { background-color: #E2BF65; }
+.type-flying { background-color: #A98FF3; }
+.type-psychic { background-color: #F95587; }
+.type-bug { background-color: #A6B91A; }
+.type-rock { background-color: #B6A136; }
+.type-ghost { background-color: #735797; }
+.type-dragon { background-color: #6F35FC; }
+.type-dark { background-color: #705746; }
+.type-steel { background-color: #B7B7CE; }
+.type-fairy { background-color: #D685AD; }
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 
-.pokemon-stats {
-  text-align: left;
-  width: 100%;
+.info-button, .moves-button {
+  margin: 5px;
+  padding: 5px 20px;
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
-.pokemon-moves {
-  text-align: left;
-  width: 100%;
-  max-height: 150px;
-  overflow-y: auto;
+.active-info {
+  background-color: #4CAF50; 
 }
+
+.active-moves {
+  background-color: #4CAF50; 
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+}
+
+
