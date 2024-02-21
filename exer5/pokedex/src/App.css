@@ -1,35 +1,60 @@
 .App {
   text-align: center;
   font-family: sans-serif;
-  display: flex; /* This will help us align items side-by-side */
+  min-height: 100vh; 
+}
+.header {
+  text-align: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.types-text {
+  display: flex;
   justify-content: center;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 .content {
   display: flex;
-  flex-direction: row; /* Align children in a row */
+  justify-content: center; 
+  max-width: 600px; 
+  margin: auto; 
 }
 
 .left-column, .right-column {
-  flex: 1; /* Each column will take up equal space */
-  padding: 20px; /* Add some padding around the content */
+  padding: 70px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
 
 .sprite-container {
   border: 2px solid rgb(70, 70, 70);
   display: inline-block;
   padding: 2px;
+  height: 350px;
+  width: 350px;
+}
+
+.sprite-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintain aspect ratio */
 }
 
 .navigation-buttons {
   display: flex;
-  justify-content: center; /* Center the navigation buttons horizontally */
+  justify-content: center; 
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .info-button.active, .moves-button.active {
-  background-color: #4CAF50; 
+  background-color: #48f64e; 
 }
+
 
 .App-header {
   background-color: #fff;
@@ -53,24 +78,24 @@ button {
   background-color: lightgrey;
   border: none;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
   box-shadow: 0cqh 0px 2px 0px rgba(0,0,0,0.75);
+  font-size: large;
 }
 
 .name-box {
   height: 50;
-  width: 150px;
+  width: 335px;
   padding: 10px;
   margin-top: 20px;
   border: 1px solid rgb(129, 129, 129);
   background-color: lightgrey;
-  border-radius: 10px;
   margin-bottom: 8px; 
-  display: inline-block; /* makes the container as wide as its content */
+  border-radius: 5px;
+  font-size: 23px;
 }
 
 .name-text {
-  font-size: 16px;
   color: black;
   margin: 0; 
 }
@@ -78,19 +103,22 @@ button {
 .type-text {
   display: inline-block;
   background-color: olive;
-  color: white;
+  color: #fff; 
   padding: 4px 8px;
   margin: 4px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 14px;
-  }
+}
+
+
   
   .button-box {
     display: flex;
     justify-content: center;
+    border-radius: 5px;
   }
 
-  .type-normal { background-color: #A8A77A; }
+.type-normal { background-color: #A8A77A; }
 .type-fire { background-color: #EE8130; }
 .type-water { background-color: #6390F0; }
 .type-electric { background-color: #F7D02C; }
@@ -125,7 +153,6 @@ button {
   background-color: lightgrey;
   border: none;
   cursor: pointer;
-  border-radius: 25px;
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 }
 
@@ -137,9 +164,20 @@ button {
   background-color: #4CAF50; 
 }
 
-.button-box {
-  display: flex;
-  justify-content: center;
+
+.fixed-box {
+  width: 300px;
+  height: 400px;
+  background-color: lightgrey;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 6px;
 }
 
-
+.info, .moves {
+  text-align: left; /* Align the text to the left */
+}
