@@ -12,7 +12,12 @@ function App() {
 
   return (
     <>
-      
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home loggedIn={loggedIn} />} />
+          <Route path = {'/login'} element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

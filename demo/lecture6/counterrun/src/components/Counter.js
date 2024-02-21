@@ -5,7 +5,7 @@ import IncrementButton from './increment/IncrementButton';
 import ResetButton from './reset/ResetButton';
 
 
-function Counter() {
+function Counter(resetProp) {
 
     const [count, setCount] = useState(0);
 
@@ -18,12 +18,20 @@ function Counter() {
         setCount(count - 1);
       }
     };
+
+    const reset = () => {
+      setCount(0); // Resetting the count state
+      if (resetProp) {
+          resetProp(); // Calling the resetProp function passed from the parent
+      }
+  };
   
     return (
       <div className="counter">
         Counter: {count}
         <button onClick={increment}>Increment by 2</button>
-        <button onClick={decrement}>Decrement</button>
+        <button onClick={decrement}>Decrement</button>\
+        <ResetButton setCount={setCount} />
       </div>
     );
   }

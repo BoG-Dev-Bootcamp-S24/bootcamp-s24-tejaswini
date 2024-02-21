@@ -1,3 +1,9 @@
+.sprite-container {
+  border: 2px solid rgb(70, 70, 70);
+  display: inline-block;
+  padding: 2px; 
+}
+
 .App {
   text-align: center;
   font-family: sans-serif;
@@ -5,30 +11,113 @@
 
 .App-header {
   background-color: #fff;
-  color: black;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .App-logo {
-  height: 150px; 
-  pointer-events: all; 
+  height: 200px;
+  pointer-events: all;
 }
 
 button {
   margin: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: lightgrey;
   border: none;
   cursor: pointer;
-  border-radius: 50px;
-  font-size: large;
-  justify-content: space-between;
-
+  border-radius: 25px;
+  box-shadow: 0cqh 0px 2px 0px rgba(0,0,0,0.75);
 }
+
+.name-box {
+  height: 50;
+  width: 150px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid rgb(129, 129, 129);
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin-bottom: 8px; 
+  display: inline-block; /* makes the container as wide as its content */
+}
+
+.name-text {
+  font-size: 16px;
+  color: black;
+  margin: 0; 
+}
+
+.type-text {
+  display: inline-block;
+  background-color: olive;
+  color: white;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 10px;
+  font-size: 14px;
+  }
+  
+  .button-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .type-normal { background-color: #A8A77A; }
+.type-fire { background-color: #EE8130; }
+.type-water { background-color: #6390F0; }
+.type-electric { background-color: #F7D02C; }
+.type-grass { background-color: #7AC74C; }
+.type-ice { background-color: #96D9D6; }
+.type-fighting { background-color: #C22E28; }
+.type-poison { background-color: #A33EA1; }
+.type-ground { background-color: #E2BF65; }
+.type-flying { background-color: #A98FF3; }
+.type-psychic { background-color: #F95587; }
+.type-bug { background-color: #A6B91A; }
+.type-rock { background-color: #B6A136; }
+.type-ghost { background-color: #735797; }
+.type-dragon { background-color: #6F35FC; }
+.type-dark { background-color: #705746; }
+.type-steel { background-color: #B7B7CE; }
+.type-fairy { background-color: #D685AD; }
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 4px;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.info-button, .moves-button {
+  margin: 5px;
+  padding: 5px 20px;
+  background-color: lightgrey;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+
+.active-info {
+  background-color: #4CAF50; 
+}
+
+.active-moves {
+  background-color: #4CAF50; 
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+}
+
 
