@@ -99,6 +99,10 @@ button {
   color: black;
   margin: 0; 
 }
+.types-text, .types {
+  justify-content: left;
+  text-align: left;
+}
 
 .type-text {
   display: inline-block;
@@ -179,5 +183,5 @@ button {
 }
 
 .info, .moves {
-  text-align: left; /* Align the text to the left */
+  text-align: left;
 }
