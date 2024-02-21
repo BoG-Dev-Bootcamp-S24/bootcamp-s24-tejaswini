@@ -6,12 +6,10 @@ const API_URL = "https://pokeapi.co/api/v2/pokemon/";
 function App() {
   const [dexNumber, setDexNumber] = useState(1);
   const [pokemonData, setPokemonData] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [currentTab, setCurrentTab] = useState('info'); // 'info' or 'moves'
 
   const fetchPokemonData = async (dexNumber) => {
-    setIsLoading(true);
     setError(null);
     try {
       const response = await fetch(`${API_URL}${dexNumber}/`);
@@ -24,7 +22,6 @@ function App() {
       setError(e.message);
       setPokemonData(null);
     }
-    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -36,7 +33,6 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <div>Loading...</div>}
       {error && <div>Error: {error}</div>}
       {pokemonData && (
         <>
