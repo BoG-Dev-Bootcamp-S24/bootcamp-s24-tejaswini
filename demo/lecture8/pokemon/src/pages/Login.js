@@ -2,10 +2,28 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function Login({ loggedIn, setLoggedIn }) {
-  return (
-    <div>
-    </div>
-  );
+  const navigate = useNavigate();
+  if (loggedIn) {
+      return (
+        <div>
+          already logged in
+        </div>
+      );
+  } else {
+    return (
+      <div>
+        <h1>Auth Page</h1>
+        <button
+          onClick={() => {
+            setLoggedIn(true);
+            navigate("/")
+          }}
+        >
+          Log In
+        </button>
+      </div>
+    )
+  }
 }
 
 
