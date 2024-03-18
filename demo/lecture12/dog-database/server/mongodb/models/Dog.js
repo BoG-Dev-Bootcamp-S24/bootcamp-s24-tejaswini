@@ -1,17 +1,17 @@
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
 const dogSchema = new mongoose.Schema({
-    name : {
-        type : String,
-        required : true
+    name: {
+        type: String,
+        required: true
     },
-    age : {
-        type : Number,
-        required : true
+    age: {
+        type: Number,
+        required: true
     },
-    breed: String
-
+    breed: {
+        type: String
+    }
 })
 
-
-export default mongoose.model("Dog", dogSchema)
+export default mongoose.models?.Dog || mongoose.model("Dog", dogSchema)

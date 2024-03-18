@@ -1,14 +1,12 @@
-import createDog from "../../../server/mongodb/actions/createDog";
+import createDog from "../../../server/mongodb/actions/createDog.js"
 
-export default async function addDog(req, res) {
-    if (req.method === "POST") {
+export default async function handler(req, res) {
+    if (req.method == 'POST') {
         try {
-            await createDog(req.body);
-            return res.status(200).send("Dog created successsfully");
+            await createDog(req.body)
         } catch (e) {
-            return res.status(405).send("Error creating dog");
+            return res.status(500).send("Unable to save dog")
         }
-    } else {
-        return res.status(405).send("Method not allowed");
+        return res.status(200).send("Successfully saved dog")
     }
 }
